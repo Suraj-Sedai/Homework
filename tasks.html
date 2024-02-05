@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tasks</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="Task Tracker Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="dis.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="task-form-section">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" required>
+
+                <label for="due-date">Due Date:</label>
+                <input type="text" id="due-date" placeholder="MM/DD/YYYY" required>
+
+                <button class="add-btn" type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section id="task-list" class="task-list">
+            <h2>Task List</h2>
+
+            <div class="task-item" data-task-id="1">
+                <h3>Task 1</h3>
+                <p>Description of Task 1</p>
+                <div class="task-actions">
+                    <button class="delete-btn">Delete</button>
+                    <button class="status-btn">Mark as Done</button>
+                    <label>
+                        <input type="checkbox" class="feature-checkbox" onchange="toggleFeatured(this)"> Featured
+                    </label>
+                </div>
+            </div>
+
+            <div class="task-item" data-task-id="2">
+                <h3>Task 2</h3>
+                <p>Description of Task 2</p>
+                <div class="task-actions">
+                    <button class="delete-btn">Delete</button>
+                    <button class="status-btn">Mark as Done</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>sedais273@lynchburg.edu</p>
+            <p>Phone: (434) 382-9405</p>
+            <p>Address: 1501 Lakeside Dr, Lynchburg, VA</p>
+        </div>
+        <p>&copy; 2024 Task Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
